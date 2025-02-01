@@ -12,6 +12,9 @@
   position: relative;
   margin-top: -3rem; /* compensate for intro top margin */
   margin-bottom: 3rem;
+  border-top: 1px solid $mk_purple;
+  border-bottom: 1px solid $mk_purple;
+
 
   &::before {
     position: absolute;
