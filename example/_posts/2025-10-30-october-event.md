@@ -1,13 +1,14 @@
 ---
-title: "Hero and Thumbnail"
-excerpt: "This post demonstrates the use of image and thumbnail."
+title: "October Event"
+excerpt: "This is a future event that will happen in October."
+date: 2025-10-30T12:51:00.000Z
 hero_image: https://makeroanoke.org/assets/images/blender-discord.png
 thumbnail: https://makeroanoke.org/assets/images/blender-discord.png
 categories: 
-  - Event
+  - Event 
   - Post
 tags: 
-  - code 
+  - code
   - syntax highlighting
 --- 
 

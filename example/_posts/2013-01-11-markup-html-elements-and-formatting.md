@@ -2,6 +2,7 @@
 title: "Markup: HTML Elements and Formatting"
 sub_title: "The common elements"
 categories:
+  - Event
   - Markup
 elements:
   - content

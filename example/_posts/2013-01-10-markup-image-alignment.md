@@ -2,6 +2,7 @@
 title: "Markup: Image Alignment"
 categories:
   - Markup
+  - Event
 tags:
   - alignment
   - captions
@@ -10,6 +11,8 @@ tags:
   - image
   - markup
 last_modified_at: 2017-03-09T11:15:57-05:00
+categories: 
+  - Event
 ---
 
 The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let's get started.

@@ -2,6 +2,7 @@
 title: "Markup: Text Alignment and Transformations"
 categories:
   - Markup
+  - Event
 tags:
   - alignment
   - content
