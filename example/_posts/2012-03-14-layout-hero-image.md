@@ -7,6 +7,7 @@ tags:
   - content
   - image
   - layout
+  - pinned
 last_modified_at: 2017-03-17T10:46:49-04:00
 ---
 
