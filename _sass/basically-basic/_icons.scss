@@ -12,6 +12,10 @@
   vertical-align: middle;
   fill: currentColor;
 
+  &.pin-icon{
+    width: 0.8em;
+  }
+
   $icons: (
     (bitbucket, #205081),
     (codepen, #000),

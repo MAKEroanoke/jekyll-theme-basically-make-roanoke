@@ -1,0 +1,49 @@
+{% if post.id %}
+  {% assign title = post.title | markdownify | strip_html %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<article class="entry">
+  <header class="entry-header">
+    {% if post.image.thumbnail or post.thumbnail %}
+    <a href="{{ post.url | relative_url }}" rel="bookmark">
+      {% if post.image.thumbnail %}
+        {% assign entry_image = post.image.thumbnail | relative_url | escape %}
+        <img class="entry-image u-photo" src="{{ entry_image }}" alt="">
+      {% elsif post.thumbnail %}
+        {% assign entry_image = post.thumbnail | relative_url | escape %}
+        <img class="entry-image u-photo" src="{{ entry_image }}" alt="">
+      {% endif %}
+    </a>
+    {% endif %}
+    <h3 class="entry-title">
+      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ title }}</a>
+    </h3>
+    <div class="entry-meta">
+      <ul>
+      {% if post.tags contains "pinned" or post.tags contains "Pinned" %}
+        <li><span class="icon pin-icon">{% include icon-thumbtack.svg %}</span><span>Pinned</span></li>
+      {% endif %}
+      {% if post.categories != empty %}
+        <li><span class="icon">{% include icon-tag.svg %}</span>{% include post-category.html categories=post.categories %}</li>
+      {% endif %}
+      {% if post.date %}
+        <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
+      {% endif %}
+      {% if post.tags != empty %}
+        <li><span class="icon">{% include icon-tags.svg %}</span>{% include post-tags.html tags=post.tags %}</li>
+      {% endif %}
+      {% if post.read_time %}
+        <li><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
+      {% endif %}
+      </ul>
+    </div>
+  </header>
+  <div class="entry-excerpt">
+    {% if post.excerpt %}
+      {{ post.excerpt | markdownify }}
+      <p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
+    {% endif %}
+  </div>
+</article>
